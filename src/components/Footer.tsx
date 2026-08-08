@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { Camera, Mail, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -15,15 +14,9 @@ export default function Footer() {
           <div className="sm:col-span-2">
             <Link
               href="/"
-              className="inline-block mb-4"
+              className="text-2xl sm:text-3xl font-bold tracking-tighter text-white inline-block mb-4"
             >
-              <Image 
-                src="/logo.png" 
-                alt="PTL MEDIA" 
-                width={160} 
-                height={60} 
-                className="h-12 sm:h-16 w-auto object-contain brightness-0 invert" 
-              />
+              PTL<span className="text-primary">MEDIA</span>
             </Link>
             <p className="text-gray-400 text-base sm:text-lg max-w-sm">
               Editing That Moves People. We build visual experiences that grow brands, creators, and businesses.
