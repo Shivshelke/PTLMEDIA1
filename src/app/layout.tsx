@@ -13,9 +13,6 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "PTL MEDIA | Premium Video Editing Agency",
   description: "We don't just edit videos. We create experiences. From scroll-stopping reels to cinematic brand films.",
-  icons: {
-    icon: "/logo.png",
-  },
 };
 
 export const viewport = {
