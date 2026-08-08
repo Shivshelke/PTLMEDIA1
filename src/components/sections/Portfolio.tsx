@@ -201,6 +201,11 @@ export default function Portfolio() {
   const previewRefs = useRef<Record<number, HTMLVideoElement | null>>({});
   const [activePreviewProject, setActivePreviewProject] = useState<number | null>(null);
   const [generatedThumbnails, setGeneratedThumbnails] = useState<Record<number, string>>({});
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+  useEffect(() => {
+    setIsTouchDevice(window.matchMedia("(hover: none) and (pointer: coarse)").matches);
+  }, []);
 
   useEffect(() => {
     let isCancelled = false;
@@ -297,6 +302,29 @@ export default function Portfolio() {
     preview.currentTime = 0;
   };
 
+  useEffect(() => {
+    if (!isTouchDevice) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const id = Number(entry.target.getAttribute("data-project-id"));
+          if (entry.isIntersecting) {
+            handlePreviewStart(id);
+          } else {
+            handlePreviewStop(id);
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+
+    const elements = document.querySelectorAll(".portfolio-item");
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, [isTouchDevice]);
+
   return (
     <section id="portfolio" className="py-20 sm:py-28 md:py-32 relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,122,0,0.14),transparent_55%)]" />
@@ -340,14 +368,15 @@ export default function Portfolio() {
           {projects.map((project, i) => (
             <motion.div
               key={project.id}
-              className="relative group cursor-pointer overflow-hidden rounded-2xl border border-white/10 bg-black/60 shadow-[0_24px_60px_rgba(0,0,0,0.5)]"
+              data-project-id={project.id}
+              className="portfolio-item relative group cursor-pointer overflow-hidden rounded-2xl border border-white/10 bg-black/60 shadow-[0_24px_60px_rgba(0,0,0,0.5)]"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-30px" }}
               transition={{ duration: 0.6, delay: i * 0.08 }}
               onClick={() => setSelectedProject(project)}
-              onMouseEnter={() => handlePreviewStart(project.id)}
-              onMouseLeave={() => handlePreviewStop(project.id)}
+              onMouseEnter={() => !isTouchDevice && handlePreviewStart(project.id)}
+              onMouseLeave={() => !isTouchDevice && handlePreviewStop(project.id)}
             >
               <div className="relative aspect-[4/5] sm:aspect-[16/11]">
                 <Image

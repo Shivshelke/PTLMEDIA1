@@ -27,9 +27,8 @@ export default function Navbar() {
   return (
     <>
       <motion.header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-          isScrolled ? "py-4 glass-panel" : "py-6 bg-transparent"
-        }`}
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? "py-4 glass-panel" : "py-6 bg-transparent"
+          }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
