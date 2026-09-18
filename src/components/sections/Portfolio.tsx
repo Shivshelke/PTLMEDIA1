@@ -24,96 +24,76 @@ const featuredProjects: FeaturedProject[] = [
   // Add `previewUrl` (direct .mp4) to enable muted hover previews.
   {
     id: 1,
-    title: "Thar Editz Reel",
+    title: "Video 1",
     category: "Reel",
     duration: "00:20",
-    driveUrl: "https://drive.google.com/file/d/1FQnV4SUHx_sjjWt--yXde5Oqe8T20H6P/view?usp=sharing",
-    customThumbnailUrl:
-      "https://i.pinimg.com/736x/a8/bd/76/a8bd7655e7ae6c67104c870ed6b423da.jpg",
+    driveUrl: "https://drive.google.com/file/d/1qsjnnDUXFd18feAUjHGMVrmUJ8Nxuh40/view?usp=drivesdk",
   },
   {
     id: 2,
-    title: "Scorpio Reel",
+    title: "Video 2",
     category: "Short",
     duration: "00:32",
-    driveUrl: "https://drive.google.com/file/d/1zaZUXvOW08uCFhm53nlMvLSTaQMgvZsZ/view?usp=sharing",
-    customThumbnailUrl:
-      "https://i.pinimg.com/736x/f1/87/8e/f1878e228d6873595c6e5b558e2d2494.jpg",
+    driveUrl: "https://drive.google.com/file/d/1ZqRvCvw0qKvyngmYmjtJB9bGSq8tZtQT/view?usp=drivesdk",
   },
   {
     id: 3,
-    title: "Annabhau Sathe Edit",
+    title: "Video 3",
+    category: "Reel",
+    duration: "00:30",
+    driveUrl: "https://drive.google.com/file/d/1FVO1cge4qoI2qWN2Z1tx9LFBS8JbgAwj/view?usp=drivesdk",
+  },
+  {
+    id: 4,
+    title: "Video 4",
+    category: "village life",
+    duration: "00:25",
+    driveUrl: "https://drive.google.com/file/d/1tybCxbPaoRSouXTLw14wiCuaghCTpxJJ/view?usp=drivesdk",
+  },
+  {
+    id: 5,
+    title: "Video 5",
+    category: "YouTube",
+    duration: "00:50",
+    driveUrl: "https://drive.google.com/file/d/1vCS_-CuWjFYMlx-pyIyEDNkwC7ADkBlS/view?usp=drivesdk",
+  },
+  {
+    id: 6,
+    title: "Video 6",
+    category: "Reel",
+    duration: "00:20",
+    driveUrl: "https://drive.google.com/file/d/1mlFmuc_wiJvBJyC-TvnY7Wb-NaWHDYB-/view?usp=drivesdk",
+  },
+  {
+    id: 7,
+    title: "Video 7",
+    category: "Reel",
+    duration: "00:40",
+    driveUrl: "https://drive.google.com/file/d/1fLPMRwpzJD7MTiyZg6DSha5FbP2_e-g7/view?usp=drivesdk",
+  },
+  {
+    id: 8,
+    title: "Video 8",
+    category: "Reel",
+    duration: "00:15",
+    driveUrl: "https://drive.google.com/file/d/1P07qPVVwqgmhHMuQwYcoYnF-cGIA_Iyq/view?usp=drivesdk",
+  },
+  {
+    id: 9,
+    title: "Video 9",
+    category: "YouTube",
+    duration: "00:50",
+    driveUrl: "https://drive.google.com/file/d/1FGbPlsZLIBHW_EaVr3jQS0tZEpoOS7Wp/view?usp=drivesdk",
+  },
+  {
+    id: 10,
+    title: "Video 10",
     category: "Reel",
     duration: "00:30",
     driveUrl: "https://drive.google.com/file/d/16ZpycVgOHdvqgRQis7I3OYZLbrshWdfB/view?usp=share_link",
     customThumbnailUrl:
       "https://i.pinimg.com/736x/b4/84/d5/b484d59bbb5ddc2acb068ed4ec72840d.jpg",
   },
-  {
-    id: 4,
-    title: "Village life editz",
-    category: "village life",
-    duration: "00:25",
-    driveUrl: "https://drive.google.com/file/d/1RKrc27x_wo-mMFCxNJXlzENKNj2IQNwa/view?usp=sharing",
-    customThumbnailUrl:
-      "https://i.pinimg.com/1200x/80/3c/c2/803cc24726e912cfdcf79e9b80a60ff0.jpg",
-  },
-  {
-    id: 5,
-    title: "This Is Not Editing. This Is Positioning.",
-    category: "YouTube",
-    duration: "00:50",
-    driveUrl: "https://v1.pinimg.com/videos/iht/expMp4/39/8c/99/398c9919d410d5179b9b41edd180e9ed_720w.mp4",
-    previewUrl:
-      "https://v1.pinimg.com/videos/iht/expMp4/39/8c/99/398c9919d410d5179b9b41edd180e9ed_720w.mp4",
-    customThumbnailUrl:
-      "https://i.pinimg.com/originals/a0/7f/2b/a07f2bea1e1d7c4e083f6af25bd722ac.jpg",
-  },
-  {
-    id: 6,
-    title: "Thar Editz Reel",
-    category: "Reel",
-    duration: "00:20",
-    driveUrl: "https://v1.pinimg.com/videos/iht/expMp4/e1/c0/76/e1c076c627b48994220da9ec8202e9d7_720w.mp4",
-    previewUrl:
-      "https://v1.pinimg.com/videos/iht/expMp4/e1/c0/76/e1c076c627b48994220da9ec8202e9d7_720w.mp4",
-    customThumbnailUrl:
-      "https://i.pinimg.com/originals/39/31/f2/3931f21b7ae5bdd7eef70a12b54b0614.jpg",
-  },
- {
-    id: 7,
-    title: "Pro Video Editing: 10x Your Reels in Minutes! 🚀",
-    category: "Reel",
-    duration: "00:40",
-    driveUrl: "https://v1.pinimg.com/videos/iht/expMp4/76/d4/8e/76d48e86507e32bb90c1bc7c64005f9b_720w.mp4",
-    previewUrl:
-      "https://v1.pinimg.com/videos/iht/expMp4/76/d4/8e/76d48e86507e32bb90c1bc7c64005f9b_720w.mp4",
-    customThumbnailUrl:
-      "https://i.pinimg.com/originals/16/7a/fd/167afd48460e40ba9176e7db2d91b3d9.jpg",
-  },
-  {
-    id: 8,
-    title: "Not a player. A standard. 👑🔥",
-    category: "Reel",
-    duration: "00:15",
-    driveUrl: "https://v1.pinimg.com/videos/iht/expMp4/78/bb/a4/78bba42a10ed03a9efa40e5a340196f5_720w.mp4",
-    previewUrl:
-      "https://v1.pinimg.com/videos/iht/expMp4/78/bb/a4/78bba42a10ed03a9efa40e5a340196f5_720w.mp4",
-      customThumbnailUrl:
-      "https://i.pinimg.com/originals/63/ed/21/63ed21655ec4881e03a5ba3c916ee9d1.jpg",
-  },
-  {
-    id: 9,
-    title: "This Is Not Editing. This Is Positioning.",
-    category: "YouTube",
-    duration: "00:50",
-    driveUrl: "https://v1.pinimg.com/videos/iht/expMp4/92/d0/be/92d0be688264a4fdf2c8edb3c1671088_720w.mp4",
-    previewUrl:
-      "https://v1.pinimg.com/videos/iht/expMp4/92/d0/be/92d0be688264a4fdf2c8edb3c1671088_720w.mp4",
-    customThumbnailUrl:
-      "https://i.pinimg.com/originals/f6/f0/59/f6f0595f7ba76784ba2958674101a14f.jpg",
-  },
-  
 ];
 
 function extractGoogleDriveFileId(driveUrl: string): string | null {
