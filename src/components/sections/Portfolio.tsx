@@ -115,7 +115,7 @@ function getGoogleDriveThumbnail(fileId: string): string {
 }
 
 function getGoogleDriveEmbed(fileId: string): string {
-  return `https://drive.google.com/uc?export=download&id=${fileId}`;
+  return `https://drive.google.com/file/d/${fileId}/preview`;
 }
 
 function isDirectVideoUrl(url: string): boolean {
@@ -225,7 +225,7 @@ export default function Portfolio() {
               ...project,
               embedUrl: getGoogleDriveEmbed(fileId),
               thumbnailUrl: project.customThumbnailUrl ?? generatedThumbnails[project.id] ?? getGoogleDriveThumbnail(fileId),
-              playerType: "video" as const,
+              playerType: "iframe" as const,
             };
           }
 
