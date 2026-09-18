@@ -438,8 +438,8 @@ export default function Portfolio() {
               transition={{ type: "spring", damping: 28, stiffness: 220 }}
               onClick={(event) => event.stopPropagation()}
             >
-              <div className="w-full max-w-7xl rounded-2xl overflow-hidden border border-white/15 shadow-[0_0_140px_rgba(255,122,0,0.2)] bg-black">
-                <div className="relative aspect-video">
+              <div className={`w-full ${["Reel", "Short", "village life"].includes(selectedProject.category) ? "max-w-[420px] h-[85vh] sm:h-[80vh] flex flex-col" : "max-w-7xl"} rounded-2xl overflow-hidden border border-white/15 shadow-[0_0_140px_rgba(255,122,0,0.2)] bg-black mx-auto`}>
+                <div className={`relative w-full ${["Reel", "Short", "village life"].includes(selectedProject.category) ? "flex-1 min-h-0" : "aspect-video"}`}>
                   {selectedProject.playerType === "video" ? (
                     <video
                       src={selectedProject.embedUrl}
