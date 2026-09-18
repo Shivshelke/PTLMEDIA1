@@ -115,7 +115,7 @@ function getGoogleDriveThumbnail(fileId: string): string {
 }
 
 function getGoogleDriveEmbed(fileId: string): string {
-  return `https://drive.google.com/file/d/${fileId}/preview`;
+  return `https://drive.google.com/uc?export=download&id=${fileId}`;
 }
 
 function isDirectVideoUrl(url: string): boolean {
@@ -225,7 +225,7 @@ export default function Portfolio() {
               ...project,
               embedUrl: getGoogleDriveEmbed(fileId),
               thumbnailUrl: project.customThumbnailUrl ?? generatedThumbnails[project.id] ?? getGoogleDriveThumbnail(fileId),
-              playerType: "iframe" as const,
+              playerType: "video" as const,
             };
           }
 
@@ -438,12 +438,12 @@ export default function Portfolio() {
               transition={{ type: "spring", damping: 28, stiffness: 220 }}
               onClick={(event) => event.stopPropagation()}
             >
-              <div className={`w-full ${["Reel", "Short", "village life"].includes(selectedProject.category) ? "max-w-[420px] h-full sm:h-[80vh] flex flex-col" : "max-w-7xl"} rounded-none sm:rounded-2xl overflow-hidden border-0 sm:border sm:border-white/15 shadow-[0_0_140px_rgba(255,122,0,0.2)] bg-black mx-auto`}>
-                <div className={`relative w-full ${["Reel", "Short", "village life"].includes(selectedProject.category) ? "flex-1 min-h-0" : "aspect-video"}`}>
+              <div className="w-full max-w-4xl h-full sm:h-[85vh] max-h-screen rounded-none sm:rounded-2xl overflow-hidden border-0 sm:border sm:border-white/15 shadow-[0_0_140px_rgba(255,122,0,0.2)] bg-black mx-auto flex flex-col">
+                <div className="relative w-full flex-1 min-h-0 bg-black flex items-center justify-center">
                   {selectedProject.playerType === "video" ? (
                     <video
                       src={selectedProject.embedUrl}
-                      className="w-full h-full"
+                      className="w-full h-full object-contain"
                       controls
                       autoPlay
                       playsInline
