@@ -420,7 +420,7 @@ export default function Portfolio() {
             onClick={() => setSelectedProject(null)}
           >
             <motion.button
-              className="absolute top-4 right-4 sm:top-6 sm:right-6 text-white/70 hover:text-white z-[122] p-3 rounded-full bg-black/60 border border-white/15 hover:border-primary/60 transition-colors"
+              className="absolute top-4 right-4 sm:top-6 sm:right-6 text-white/70 hover:text-white z-[130] p-3 rounded-full bg-black/60 border border-white/15 hover:border-primary/60 transition-colors"
               onClick={() => setSelectedProject(null)}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -431,14 +431,14 @@ export default function Portfolio() {
             </motion.button>
 
             <motion.div
-              className="h-full w-full flex items-center justify-center p-4 sm:p-8 md:p-12"
+              className="h-full w-full flex items-center justify-center p-0 sm:p-8 md:p-12"
               initial={{ scale: 0.95, y: 20 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.95, y: 20 }}
               transition={{ type: "spring", damping: 28, stiffness: 220 }}
               onClick={(event) => event.stopPropagation()}
             >
-              <div className={`w-full ${["Reel", "Short", "village life"].includes(selectedProject.category) ? "max-w-[420px] h-[85vh] sm:h-[80vh] flex flex-col" : "max-w-7xl"} rounded-2xl overflow-hidden border border-white/15 shadow-[0_0_140px_rgba(255,122,0,0.2)] bg-black mx-auto`}>
+              <div className={`w-full ${["Reel", "Short", "village life"].includes(selectedProject.category) ? "max-w-[420px] h-full sm:h-[80vh] flex flex-col" : "max-w-7xl"} rounded-none sm:rounded-2xl overflow-hidden border-0 sm:border sm:border-white/15 shadow-[0_0_140px_rgba(255,122,0,0.2)] bg-black mx-auto`}>
                 <div className={`relative w-full ${["Reel", "Short", "village life"].includes(selectedProject.category) ? "flex-1 min-h-0" : "aspect-video"}`}>
                   {selectedProject.playerType === "video" ? (
                     <video
