@@ -27,7 +27,7 @@ const featuredProjects: FeaturedProject[] = [
     title: "Video 1",
     category: "Reel",
     duration: "00:20",
-    driveUrl: "https://drive.google.com/file/d/1qsjnnDUXFd18feAUjHGMVrmUJ8Nxuh40/view?usp=drivesdk",
+    driveUrl: "https://www.image2url.com/r2/default/videos/1789839635511-636512ea-6812-4c57-8aeb-e1fc0dfb9769.mp4",
   },
   {
     id: 2,
