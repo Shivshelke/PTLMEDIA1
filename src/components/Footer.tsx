@@ -121,7 +121,7 @@ export default function Footer() {
                 </motion.span>
                 <strong className="font-extrabold tracking-tight ml-1">BY </strong>
                 <a
-                  href="https://www.instagram.com/shivamshelke07"
+                  href="https://shivamshelke.qzz.io"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-extrabold tracking-tight ml-1 hover:text-primary transition-colors duration-300 cursor-pointer"
